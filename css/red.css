@@ -1,0 +1,14 @@
+body {
+    background: url(../img/rojo.jpg);
+}
+
+#logo {
+
+    background: #CA3414;
+}
+#menu ul li:hover {
+    background: #CA3414;
+  }
+  .readmore {
+    background: #CA3414;
+  }
