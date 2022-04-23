@@ -1,14 +1,17 @@
 body {
-    background: url(../img/hojas.jpg);
+  background: url(../img/hojas.jpg);
 }
 
 #logo {
-
-    background: #235e3d;
+  background: #235e3d;
 }
 #menu ul li:hover {
-    background: #235e3d;
-  }
-  .readmore {
-    background: #235e3d;
-  }
+  background: #235e3d;
+}
+.readmore {
+  background: #235e3d;
+}
+
+#reloj {
+  background: #235e3d;
+}

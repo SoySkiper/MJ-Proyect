@@ -43,35 +43,52 @@ $(document).ready(function () {
             <a href="#" class="readmore">Leer más</a>
           </article>
     `;
-    $('#post-div').append(post);
+    $("#post-div").append(post);
   });
 
   // Selector de tema
-  var theme = $('#theme');
-  $('#to-green').click(function(){
-    theme.attr( 'href', 'css/green.css');
+  var theme = $("#theme");
+  $("#to-green").click(function () {
+    theme.attr("href", "css/green.css");
   });
-  $('#to-blue').click(function(){
-    theme.attr( 'href', 'css/blue.css');
+  $("#to-blue").click(function () {
+    theme.attr("href", "css/blue.css");
   });
-  $('#to-red').click(function(){
-    theme.attr( 'href', 'css/red.css');
+  $("#to-red").click(function () {
+    theme.attr("href", "css/red.css");
   });
 
-  // Scrollm arriba de la web
-  $('.subir').click(function(e){
+  // Scroll arriba de la web
+  $(".subir").click(function (e) {
     e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, 500);
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
   });
 
   // Loging falso
-  $('#login form').submit(function(){
-    let formName = $('#form-name').val();
+  $("#login form").submit(function () {
+    var formName = $("#form-name").val();
 
-    localStorage.setItem('forName', form_name);
+    localStorage.setItem("sesion", formName);
   });
-  
-  var for_name = localStorage.getItem('form_name');
+
+  var sesionIncrustada = localStorage.getItem("sesion");
+
+  if (sesionIncrustada != null && sesionIncrustada != "undefined") {
+    var about_parrafo = $("#about p");
+    about_parrafo.html(
+      "<br><strong>Bienvenido " + sesionIncrustada + "<strong>"
+    );
+    about_parrafo.append("<br><a href='#' id='logout'>Cerrar sesión<a>");
+    $("#login").hide();
+
+    $('#logout').click(function(){
+      localStorage.clear();
+      location.reload();
+    });
+  }
 });

@@ -1,13 +1,16 @@
 body {
-    background: url(../img/cielo.jpg);
+  background: url(../img/cielo.jpg);
 }
 
 #logo {
-    background: #1F87C4;
+  background: #1f87c4;
 }
 #menu ul li:hover {
-    background: #1F87C4;
-  }
-  .readmore {
-    background: #1F87C4;
-  }
+  background: #1f87c4;
+}
+.readmore {
+  background: #1f87c4;
+}
+#reloj{
+  background: #1f87c4;
+}
